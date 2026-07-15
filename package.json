@@ -1,0 +1,59 @@
+{
+  "name": "dingdawg-test-agent",
+  "version": "1.0.2",
+  "description": "Validate and test your DingDawg marketplace agent before publishing. Checks manifest, MCP tools, governance policies.",
+  "main": "dist/index.js",
+  "bin": {
+    "dingdawg-test-agent": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "prepublishOnly": "bash ../../ip-gate.sh ./dist"
+  },
+  "keywords": [
+    "mcp",
+    "ai-agent",
+    "testing",
+    "validation",
+    "dingdawg",
+    "marketplace",
+    "governance",
+    "governance-receipts",
+    "receipts",
+    "audit-trail",
+    "tamper-proof",
+    "ai-governance",
+    "responsible-ai",
+    "llm-governance",
+    "signed-receipts"
+  ],
+  "author": "Innovative Systems Global <support@dingdawg.com>",
+  "license": "BUSL-1.1",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "@types/node": "^22.0.0",
+    "ts-node": "^10.9.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dingdawg/dingdawg-test-agent"
+  },
+  "homepage": "https://dingdawg.com/marketplace",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ]
+}
